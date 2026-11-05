@@ -12,11 +12,16 @@
 
 
             <Label Text="komputer" />
+            
             <HorizontalStackLayout
                 HeightRequest="150"
+                Spacing="10"
+                x:Name="hslKomputer"
                 >
-  
             </HorizontalStackLayout>
+            <Label x:Name="lblPunktyKomputera" />
+            
+            
             <Rectangle HeightRequest="2" BackgroundColor="Black" />
             <HorizontalStackLayout
                 HeightRequest="150"
@@ -25,18 +30,21 @@
                 >
 
             </HorizontalStackLayout>
+
+            <Label 
+                Text=""
+                x:Name="lblPunkty"
+                />
+            
             <StackLayout
                 IsVisible="False"
                 x:Name="slGra"
                 >
-                <Label 
-                    Text="punkty gracza: 0"
-                    x:Name="lblPunkty"
-                    />
                 <HorizontalStackLayout Spacing="10">
                     <Button
                         Text="pass"
                         WidthRequest="100"
+                        Clicked="BtnPassKlik"
                         />
                     <Button
                         Text="daj kartę"
@@ -55,6 +63,10 @@
                     Clicked="BtnNowaGraKlik"
                     />
             </StackLayout>
+            <Label
+                Text="" 
+                x:Name="lblStatystyka"
+                />
 
         </VerticalStackLayout>
     </ScrollView>
